@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>FatSocial - Home</title>
+
+    <% include ../partials/head.ejs %>
+
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+<% include ../partials/header.ejs %>
+
+<div id="main-content">
+    <div class="post">
+        <div class="post-header">
+            <div class="post-user">
+                <img src="/img/<%= username %>.jpg">
+                <div>
+                    <%= username %>
+                </div>
+            </div>
+            <div class="post-description">Colonia!</div>
+        </div>
+        <div class="post-content">
+            <img src="/img/post.jpg">
+        </div>
+        <div class="post-controls">
+            <button class="post-control"><img src="/img/love.png">Like</button>
+            <button class="post-control"><img src="/img/comment.png">Comment</button>
+            <button class="post-control"><img src="/img/repost.png">Repost</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

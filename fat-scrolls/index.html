@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../code-prettify/prettify.css">
+    <link rel="stylesheet" href="../code-prettify/tomorrow.min.css">
+    <link rel="stylesheet" href="../plugin-stylesheets/common.css">
+    <link rel="stylesheet" href="fat-scrolls/fat.scrolls.css">
+
+    <script src="../jquery/jquery.min.js"> </script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
+    <script src="../code-prettify/prettify.js"></script>
+    <script src="fat-scrolls/fat.scrolls.js"></script>
+
+    <script>
+
+        $(document).on('ready', function() {
+            $('#fat-scroll-demo').fatScroll({
+                style    :    'spring',
+                height   :    400,
+                width    :    '1' +
+                '00%'
+            });
+        });
+
+    </script>
+
+    <style>
+
+        #fat-scroll-demo {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        #fat-scroll-demo .fat-scroll-list {
+            margin-top: 21px;
+        }
+
+    </style>
+
+</head>
+<body onload="prettyPrint()">
+
+    <div class="header">
+        <div class="header-left">
+            <ul class="header-nav">
+                <li><a href="#download">Download</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#howto">How To</a></li>
+                <li><a href="#customize">Customizing</a></li>
+            </ul>
+        </div>
+
+        <div class="header-right">
+            <h2>fat.scrolls.js</h2>
+        </div>
+    </div>
+
+    <div class="container-fluid container-heading" id="download">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-5 container-heading-left">
+                    <img src="../plugin-images/avatar.png">
+                </div>
+                <div class="col-sm-7 container-heading-right">
+                    <h1>Fat.Scrolls</h1>
+
+                    <p>
+                        A stylish <b>jQuery</b> plugin that enables you to put scrolling animations on lists
+
+                        <a href="../fat.scrolls.zip" class="btn btn-lg btn-info" style="margin-top: 20px; width: 100%;">Download</a>
+                        <a href="" class="heading-link">Check it out on Github</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="demo">
+        <h2>DEMO</h2>
+        <div class="container-content" style="display: flex;">
+            <div class="col-md-8">
+                <ul class="nav nav-tabs nav-tabs-code" style="margin-top: 20px;">
+                    <li class="active"><a data-toggle="tab" href="#demo-html">HTML</a></li>
+                    <li><a data-toggle="tab" href="#demo-css">CSS</a></li>
+                    <li><a data-toggle="tab" href="#demo-javascript">Javascript</a></li>
+                </ul>
+
+                <div class="tab-content tab-content-code">
+                    <div id="demo-html" class="tab-pane fade in active">
+                        <pre class="prettyprint linenums">
+&lt;div class="fat-scroll" id = "fat-scroll-demo"&gt;
+    &lt;h3&gt;Shrink&lt;/h3&gt;
+    &lt;ul class="fat-scroll-list"&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+        &lt;li&gt;Four&lt;/li&gt;
+        &lt;li&gt;Five&lt;/li&gt;
+        &lt;li&gt;Six&lt;/li&gt;
+        &lt;li&gt;Seven&lt;/li&gt;
+        &lt;li&gt;Eight&lt;/li&gt;
+        &lt;li&gt;Nine&lt;/li&gt;
+        &lt;li&gt;Ten&lt;/li&gt;
+        &lt;li&gt;Eleven&lt;/li&gt;
+        &lt;li&gt;Twelve&lt;/li&gt;
+        &lt;li&gt;Thirteen&lt;/li&gt;
+        &lt;li&gt;Fourteen&lt;/li&gt;
+        &lt;li&gt;Fifteen&lt;/li&gt;
+        &lt;li&gt;Sixteen&lt;/li&gt;
+        &lt;li&gt;Seventeen&lt;/li&gt;
+        &lt;li&gt;Eighteen&lt;/li&gt;
+        &lt;li&gt;Nineteen&lt;/li&gt;
+        &lt;li&gt;Twenty&lt;/li&gt;
+        &lt;li&gt;Twenty One&lt;/li&gt;
+        &lt;li&gt;Twenty Two&lt;/li&gt;
+        &lt;li&gt;Twenty Three&lt;/li&gt;
+        &lt;li&gt;Twenty Four&lt;/li&gt;
+        &lt;li&gt;Twenty Five&lt;/li&gt;
+        &lt;li&gt;Twenty Six&lt;/li&gt;
+        &lt;li&gt;Twenty Seven&lt;/li&gt;
+        &lt;li&gt;Twenty Eight&lt;/li&gt;
+        &lt;li&gt;Twenty Nine&lt;/li&gt;
+        &lt;li&gt;Thirty&lt;/li&gt;
+        &lt;li&gt;Thirty One&lt;/li&gt;
+        &lt;li&gt;Thirty Two&lt;/li&gt;
+        &lt;li&gt;Thirty Three&lt;/li&gt;
+        &lt;li&gt;Thirty Four&lt;/li&gt;
+        &lt;li&gt;Thirty Five&lt;/li&gt;
+        &lt;li&gt;Thirty Six&lt;/li&gt;
+        &lt;li&gt;Thirty Seven&lt;/li&gt;
+        &lt;li&gt;Thirty Eight&lt;/li&gt;
+        &lt;li&gt;Thirty Nine&lt;/li&gt;
+        &lt;li&gt;Forty&lt;/li&gt;
+        &lt;li&gt;Forty One&lt;/li&gt;
+        &lt;li&gt;Forty Two&lt;/li&gt;
+        &lt;li&gt;Forty Three&lt;/li&gt;
+        &lt;li&gt;Forty Four&lt;/li&gt;
+        &lt;li&gt;Forty Five&lt;/li&gt;
+        &lt;li&gt;Forty Six&lt;/li&gt;
+        &lt;li&gt;Forty Seven&lt;/li&gt;
+        &lt;li&gt;Forty Eight&lt;/li&gt;
+        &lt;li&gt;Forty Nine&lt;/li&gt;
+        &lt;li&gt;Fifty&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;div&gt;</pre>
+                    </div>
+                    <div id="demo-css" class="tab-pane fade">
+                        <pre class="prettyprint linenums">
+#fat-scroll-demo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+#fat-scroll-demo .fat-scroll-list {
+    margin-top: 21px;
+}
+                        </pre>
+                    </div>
+                    <div id="demo-javascript" class="tab-pane fade">
+                        <pre class="prettyprint linenums">
+//Call the plugin
+
+$('#fat-scroll-demo').fatScroll({
+    style  : 'shrink',
+    height : 400,
+    width  : '100%'
+});
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fat-scroll" id="fat-scroll-demo">
+                    <h3>SPRING</h3>
+                    <ul class="fat-scroll-list" style=" ">
+                        <li>One</li><li>Two</li><li>Three</li><li>Four</li><li>Five</li><li>Six</li><li>Seven</li>
+                        <li>Eight</li><li>Nine</li><li>Ten</li><li>Eleven</li><li>Twelve</li><li>Thirteen</li>
+                        <li>Fourteen</li><li>Fifteen</li><li>Sixteen</li><li>Seventeen</li><li>Eighteen</li>
+                        <li>Nineteen</li><li>Twenty</li><li>Twenty One</li><li>Twenty Two</li><li>Twenty Three</li>
+                        <li>Twenty Four</li><li>Twenty Five</li><li>Twenty Six</li><li>Twenty Seven</li>
+                        <li>Twenty Eight</li><li>Twenty Nine</li><li>Thirty</li><li>Thirty One</li><li>Thirty Two</li>
+                        <li>Thirty Three</li><li>Thirty Four</li><li>Thirty Five</li><li>Thirty Six</li>
+                        <li>Thirty Seven</li><li>Thirty Eight</li><li>Thirty Nine</li><li>Forty</li><li>Forty One</li>
+                        <li>Forty Two</li><li>Forty Three</li><li>Forty Four</li><li>Forty Five</li><li>Forty Six</li>
+                        <li>Forty Seven</li><li>Forty Eight</li><li>Forty Nine</li><li>Fifty</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="examples">
+        <h2>MORE EXAMPLES</h2>
+
+        <div class="demo-thumbnail-container">
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#shrink">
+                    Shrink
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#wave">
+                    Wave
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#curve">
+                    Curve
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#flip">
+                    Flip
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#twist">
+                    Twist
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#blinds">
+                    Blinds
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#flow">
+                    Flow
+                </a>
+            </div>
+            <div class="demo-thumbnail col-xs-12 col-sm-6 col-md-3">
+                <a href="examples.php#spring">
+                    Spring
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="howto">
+        <h2>HOW TO USE</h2>
+
+        <ol>
+            <li>
+                <h3>Load jQuery and include all the fat.scrolls plugin files</h3>
+
+                <p>To use fat.scrolls plugin, it is important to include both the plugin and
+                    <b>jQuery 1.7+</b> scripts.</p>
+
+                <pre class="prettyprint linenums">
+&lt;!-- Important fat.scrolls stylesheet --&gt;
+&lt;link rel="stylesheet" href="fat-scrolls/fat.scrolls.css"&gt;
+
+&lt;!-- Load the jQuery plugin --&gt;
+&lt;script src="jquery-1.9.1.min.js"&gt;
+
+&lt;!-- Include the fat.scrolls script file --&gt;
+&lt;script src="fat-scrolls/fat-scrolls.js"&gt;</pre>
+
+            </li>
+            <li>
+                <h3>Set up your HTML</h3>
+
+                <p>For the HTML, all you need to do is give the div which includes the ul list a class <b>fat-scroll</b>
+                    and the ul list a class <b>fat-scroll-list</b>.</p>
+
+                <pre class="prettyprint linenums">
+&lt;div class="fat-scroll" id = "fat-scroll-demo"&gt;
+    &lt;h3&gt;Shrink&lt;/h3&gt;
+    &lt;ul class="fat-scroll-list"&gt;
+        &lt;li&gt;One&lt;/li&gt;
+        &lt;li&gt;Two&lt;/li&gt;
+        &lt;li&gt;Three&lt;/li&gt;
+        &lt;li&gt;Four&lt;/li&gt;
+        &lt;li&gt;Five&lt;/li&gt;
+        &lt;li&gt;Six&lt;/li&gt;
+        &lt;li&gt;Seven&lt;/li&gt;
+        &lt;li&gt;Eight&lt;/li&gt;
+        &lt;li&gt;Nine&lt;/li&gt;
+        &lt;li&gt;Ten&lt;/li&gt;
+        &lt;li&gt;Eleven&lt;/li&gt;
+        &lt;li&gt;Twelve&lt;/li&gt;
+        &lt;li&gt;Thirteen&lt;/li&gt;
+        &lt;li&gt;Fourteen&lt;/li&gt;
+        &lt;li&gt;Fifteen&lt;/li&gt;
+        &lt;li&gt;Sixteen&lt;/li&gt;
+        &lt;li&gt;Seventeen&lt;/li&gt;
+        &lt;li&gt;Eighteen&lt;/li&gt;
+        &lt;li&gt;Nineteen&lt;/li&gt;
+        &lt;li&gt;Twenty&lt;/li&gt;
+        &lt;li&gt;Twenty One&lt;/li&gt;
+        &lt;li&gt;Twenty Two&lt;/li&gt;
+        &lt;li&gt;Twenty Three&lt;/li&gt;
+        &lt;li&gt;Twenty Four&lt;/li&gt;
+        &lt;li&gt;Twenty Five&lt;/li&gt;
+        &lt;li&gt;Twenty Six&lt;/li&gt;
+        &lt;li&gt;Twenty Seven&lt;/li&gt;
+        &lt;li&gt;Twenty Eight&lt;/li&gt;
+        &lt;li&gt;Twenty Nine&lt;/li&gt;
+        &lt;li&gt;Thirty&lt;/li&gt;
+        &lt;li&gt;Thirty One&lt;/li&gt;
+        &lt;li&gt;Thirty Two&lt;/li&gt;
+        &lt;li&gt;Thirty Three&lt;/li&gt;
+        &lt;li&gt;Thirty Four&lt;/li&gt;
+        &lt;li&gt;Thirty Five&lt;/li&gt;
+        &lt;li&gt;Thirty Six&lt;/li&gt;
+        &lt;li&gt;Thirty Seven&lt;/li&gt;
+        &lt;li&gt;Thirty Eight&lt;/li&gt;
+        &lt;li&gt;Thirty Nine&lt;/li&gt;
+        &lt;li&gt;Forty&lt;/li&gt;
+        &lt;li&gt;Forty One&lt;/li&gt;
+        &lt;li&gt;Forty Two&lt;/li&gt;
+        &lt;li&gt;Forty Three&lt;/li&gt;
+        &lt;li&gt;Forty Four&lt;/li&gt;
+        &lt;li&gt;Forty Five&lt;/li&gt;
+        &lt;li&gt;Forty Six&lt;/li&gt;
+        &lt;li&gt;Forty Seven&lt;/li&gt;
+        &lt;li&gt;Forty Eight&lt;/li&gt;
+        &lt;li&gt;Forty Nine&lt;/li&gt;
+        &lt;li&gt;Fifty&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;div&gt;</pre>
+
+            </li>
+            <li>
+                <h3>Call the plugin</h3>
+
+                <p>Now, just call the function on any item you want with your preferred options in a JSON object.</p>
+
+                <pre class="prettyprint linenums">
+$('#fat-scroll-demo').fatScroll({
+    style    :    'shrink'
+    width    :    '300px'
+    height   :    '450px'
+});</pre>
+
+            </li>
+        </ol>
+    </div>
+
+    <div class="container" id="customize">
+        <h2>Customizing Options</h2>
+
+        <table>
+            <thead>
+                <td>Option</td>
+                <td>Default</td>
+                <td>Type</td>
+                <td>Description</td>
+            </thead>
+            <tr>
+                <td>style</td>
+                <td>shrink</td>
+                <td>string</td>
+                <td>This aspect defines the animation style of the list elements when one scrolls up or down.</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>270px</td>
+                <td>integer/string</td>
+                <td>This defines the width of the outer container. The list is by default 100% of the width
+                    of this container. (It can be an integer like 300 or a string like '300px' which would mean the
+                    same thing. You can also set the width in percentage like '50%')</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>500px</td>
+                <td>integer/string</td>
+                <td>This defines the height of the list and not the outer container. The outer container has a height
+                    'auto' by default. (It can be an integer like 500 or a string like '500px' which would mean the
+                    same thing. You can also set the height in percentage like '50%')</td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+</html>

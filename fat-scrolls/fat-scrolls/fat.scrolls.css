@@ -1,0 +1,222 @@
+.fat-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.fat-scroll-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.fat-scroll-list li {
+    padding: 12px 20px;
+    position: relative;
+    background-color: white;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.5s;
+    -webkit-transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.5s;
+    -moz-transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.5s;
+    -o-transition: transform 0.5s ease, opacity 0.5s ease, z-index 0s 0.5s;
+    z-index: 1;
+    color: black;
+    box-shadow: 0 0 2px #d3d3d3;
+}
+.fat-scroll-list li:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+.fat-scroll-past, .fat-scroll-future {
+    z-index: 0 !important;
+}
+
+/* ---------- SHRINK ---------- */
+
+.fat-scroll-shrink .fat-scroll-past {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+.fat-scroll-shrink .fat-scroll-future {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+}
+
+/* ---------- WAVE ---------- */
+
+.fat-scroll-wave .fat-scroll-past {
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+}
+
+.fat-scroll-wave .fat-scroll-future {
+    transform: translateX(-300px);
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+}
+
+/* ---------- CURVE ---------- */
+
+.fat-scroll-curve .fat-scroll-list {
+    perspective: 1200px;
+    perspective-origin: 0% 50%;
+}
+
+.fat-scroll-curve li {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transition: transform 0.7s ease;
+    -webkit-transition: transform 0.7s ease;
+    -moz-transition: transform 0.7s ease;
+    -o-transition: transform 0.7s ease;
+}
+
+.fat-scroll-curve .fat-scroll-past {
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+}
+
+.fat-scroll-curve .fat-scroll-future {
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+}
+
+/* ---------- TWIST ---------- */
+
+.fat-scroll-twist .fat-scroll-past {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: perspective(500px) rotateX(40deg) rotateY(180deg);
+    -o-transform: rotate(30deg);
+    z-index: -1;
+}
+
+.fat-scroll-twist .fat-scroll-future {
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: perspective(500px) rotateX(-40deg) rotateY(180deg);
+    -o-transform: rotate(30deg);
+    z-index: -1;
+}
+
+/* ---------- FLOW ---------- */
+
+.fat-scroll-flow .fat-scroll-past {
+    transform: translate3D(0, 40px, -20px) scale(0.8);
+    -webkit-transform: translate3D(0, 40px, -20px) scale(0.8);
+    -moz-transform: translate3D(0, 40px, -20px) scale(0.8);
+    -o-transform: translate3D(0, 40px, -20px) scale(0.8);
+    opacity: 0.4;
+}
+.fat-scroll-flow .fat-scroll-future {
+    transform: translate3D(0, -40px, -20px) scale(0.8);
+    -webkit-transform: translate3D(0, -40px, -20px) scale(0.8);
+    -moz-transform: translate3D(0, -40px, -20px) scale(0.8);
+    -o-transform: translate3D(0, -40px, -20px) scale(0.8);
+    opacity: 0.4;
+    transition: all 0s 0s;
+    -webkit-transition: all 0s 0s;
+    -moz-transition: all 0s 0s;
+    -o-transition: all 0s 0s;
+}
+
+.fat-scroll-flow li {
+    transition: transform 0.5s ease, opacity 0.3s ease, z-index 0s 0.3s;
+    -webkit-transition: transform 0.5s ease, opacity 0.3s ease, z-index 0s 0.3s;
+    -moz-transition: transform 0.5s ease, opacity 0s ease, z-index 0s 0.4s;
+    -o-transition: transform 0.5s ease, opacity 0.3s ease, z-index 0s 0.3s;
+}
+
+/* ---------- BLINDS ---------- */
+
+.fat-scroll-blinds .fat-scroll-past {
+    transform: rotateX(80deg);
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    -o-transform: rotateX(80deg);
+    opacity: 1;
+}
+
+.fat-scroll-blinds ul {
+    perspective: 400px;
+    perspective-origin: 50% 50%;
+}
+
+.fat-scroll-blinds li {
+    transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transition: transform 0.7s ease, opacity 0.5s ease;
+    -webkit-transition: transform 0.7s ease, opacity 0.5s ease;
+    -moz-transition: transform 0.7s ease, opacity 0.5s ease;
+    -o-transition: transform 0.7s ease, opacity 0.5s ease;
+}
+
+.fat-scroll-blinds .fat-scroll-future {
+    transform: rotateX(-80deg);
+    -webkit-transform: rotateX(-80deg);
+    -moz-transform: rotateX(-80deg);
+    -o-transform: rotateX(-80deg);
+    opacity: 1;
+}
+
+/* ---------- FLIP ---------- */
+
+.fat-scroll-flip .fat-scroll-past {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.fat-scroll-flip .fat-scroll-future {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    -o-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+/* ---------- SPRING ---------- */
+
+.fat-scroll-spring .fat-scroll-past {
+    transform: rotateX(90deg) translateY(-200px) translateZ(-100px);
+    -webkit-transform: rotateX(90deg) translateY(-200px) translateZ(-100px);
+    -moz-transform: rotateX(90deg) translateY(-200px) translateZ(-100px);
+    -o-transform: rotateX(90deg) translateY(-200px) translateZ(-100px);
+}
+.fat-scroll-spring .fat-scroll-future {
+    transform: rotateX(-90deg) translateY(-200px) translateZ(100px);
+    -webkit-transform: rotateX(-90deg) translateY(-200px) translateZ(100px);
+    -moz-transform: rotateX(-90deg) translateY(-200px) translateZ(100px);
+    -o-transform: rotateX(-90deg) translateY(-200px) translateZ(100px);
+}
+
+.fat-scroll-spring li {
+    transition: transform 0.7s ease;
+    -webkit-transition: transform 0.7s ease;
+    -moz-transition: transform 0.7s ease;
+    -o-transition: transform 0.7s ease;
+}

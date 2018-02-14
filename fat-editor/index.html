@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FatMath</title>
+
+    <link href="fat-fighter.css" rel="stylesheet" type="text/css">
+
+    <script src="../plugin-scripts/jquery.min.js"></script>
+    <script src="fat-editor2.js"></script>
+
+    <script>
+
+        $(document).on('ready', function() {
+            $('#fat-editor').fatEditor();
+        });
+
+    </script>
+</head>
+<body>
+
+<div class="fat-editor" id="fat-editor">
+
+    <div class="fat-editor-toolbar">
+        <div class="fat-editor-toolbar-row">
+            <div class="fat-editor-toolbar-toolgroup" data-class = "style">
+                <button style="background-image: url('images/bold.png');" data-type="bold">&nbsp;</button>
+                <button style="background-image: url('images/italic.png');" data-type="italic">&nbsp;</button>
+                <button style="background-image: url('images/underline2.png'); background-position: center 6px; background-size: auto calc(100% - 10px);" data-type="underline">&nbsp;</button>
+                <button style="background-image: url('images/strikethrough.png'); background-size: auto calc(100% - 10px);" data-type="strikethrough">&nbsp;</button>
+                <button style="background-image: url('images/superscript.png'); background-size: auto calc(100% - 6px);" data-type="superscript">&nbsp;</button>
+                <button style="background-image: url('images/subscript.png'); background-size: auto calc(100% - 6px);" data-type="subscript">&nbsp;</button>
+
+                <select data-type="font-family">
+                    <option value="Roboto" selected>Roboto</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+
+                <select data-type="font-size">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="fat-editor-content">
+        <iframe src="design.html"></iframe>
+    </div>
+
+    <div class="fat-editor-node-info">body</div>
+
+</div>
+
+</body>
+</html>

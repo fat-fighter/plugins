@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="../plugin-scripts/jquery.min.js"></script>
+
+    <script>
+
+        $(document).on('ready', function() {
+            document.execCommand("formatBlock", false, "p");
+
+            var selection = document.getSelection(), node, parentNode;
+            var nodeName, parentNodeName;
+
+            $(document).on('mousedown keydown mouseup keyup', function() {
+                selection = document.getSelection();
+                node = selection.anchorNode;
+                parentNode = node.parentNode;
+
+                nodeName = node.nodeName.toLowerCase();
+                parentNodeName = parentNode.nodeName.toLowerCase();
+
+                parent.checkTextStyling(document, window.frameElement);
+                if (parentNodeName == "html" || parentNodeName == "body") {
+                    parent.setNodeInfo(null, "body", window.frameElement);
+                }
+                else {
+                    parent.setNodeInfo(parentNodeName, parentNode.parentNode.nodeName.toLowerCase(), window.frameElement);
+                }
+            });
+
+            $(document).on('keydown', function(e) {
+                if ((document.body.innerHTML.trim() == "<p><br></p>" || document.body.innerHTML.trim() == "<p></p>") && e.keyCode == 8) {
+                    return false;
+                }
+                if ((nodeName == "body") || (parentNodeName == "body" && nodeName == "#text")) {
+                    document.execCommand("formatBlock", false, "p");
+                }
+            });
+        });
+
+    </script>
+
+    <title>Title</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,600');
+
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            vertical-align: middle;
+        }
+
+        body .bold {
+            font-weight: 700;
+        }
+        body .underline {
+            text-decoration: underline;
+        }
+        body .strikethrough {
+            text-decoration: line-through;
+        }
+        body .underline.strikethrough {
+            text-decoration: underline line-through;
+        }
+        body .italic {
+            font-style: italic;
+        }
+        body .subscript {
+
+        }
+
+        body .indent {
+            margin-left: 40px;
+        }
+
+    </style>
+</head>
+
+<body contenteditable="true">
+
+</body>
+</html>

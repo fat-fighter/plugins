@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome | FatCarousel</title>
+
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../code-prettify/prettify.css">
+    <link rel="stylesheet" href="../code-prettify/tomorrow.min.css">
+    <link rel="stylesheet" href="../plugin-stylesheets/common.css">
+    <link rel="stylesheet" href="fat-carousel/fat.carousel.css">
+
+    <script src="../jquery/jquery.min.js"> </script>
+    <script src="../jquery/jquery.actual.min.js"> </script>
+    <script src="../jquery/jquery.scrollstop.min.js"> </script>
+    <!--<script src="../bootstrap/bootstrap.min.js"></script>-->
+    <script src="../code-prettify/prettify.js"></script>
+    <script src="fat-carousel/fat.carousel.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('#slideshow').fatCarousel({
+                imageArray : ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg", "images/5.jpg", "images/5.jpg", "images/5.jpg"],
+                itemsOnScreen : [[992, 1], [500, 1]],
+                startSlide : 1,
+                slideTime : 400,
+                autoPlay: true
+
+            });
+        });
+
+    </script>
+
+    <style>
+
+        #fat-carousel-demo {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        #fat-carousel-demo .fat-carousel-list {
+            margin-top: 21px;
+        }
+
+    </style>
+
+</head>
+<body onload="prettyPrint()">
+
+    <div class="header">
+        <div class="header-left">
+            <ul class="header-nav">
+                <li><a href="#download">Download</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#howto">How To</a></li>
+                <li><a href="#customize">Customizing</a></li>
+            </ul>
+        </div>
+
+        <div class="header-right">
+            <h2>fat.carousel.js</h2>
+        </div>
+    </div>
+
+    <div class="container-fluid container-heading" id="download">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-5 container-heading-left">
+                    <img src="../plugin-images/avatar.png">
+                </div>
+                <div class="col-sm-7 container-heading-right">
+                    <h1>Fat.Carousel</h1>
+
+                    <p>
+                        A stylish <b>jQuery</b> plugin that allows you to easily add a courousel on your webpage
+
+                        <a href="../sources/fat.carousel.zip" class="btn btn-lg btn-info" style="margin-top: 20px; width: 100%;">Download</a>
+                        <a href="" class="heading-link">Check it out on Github</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container" id="example">
+        <h2>EXAMPLE</h2><br>
+
+        <div class="fat-carousel dragscroll" id="slideshow">
+            <div class="fat-carousel-container-outer">
+                <div class="fat-carousel-container">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="howto">
+        <h2>HOW TO USE</h2>
+
+        <ol>
+            <li>
+                <h3>Load jQuery and include all the fat.carousel plugin files</h3>
+
+                <p>To use fat.carousel plugin, it is important to include both the plugin and
+                    <b>jQuery 1.7+</b> scripts.</p>
+
+                <pre class="prettyprint linenums">
+&lt;!-- Important fat.carousel stylesheet --&gt;
+&lt;link rel="stylesheet" href="fat-carousel/fat.carousel.css"&gt;
+
+&lt;!-- Load the jQuery plugin --&gt;
+&lt;script src="jquery-3.1.1.min.js"&gt;
+
+&lt;!-- Include the fat.carousels script file --&gt;
+&lt;script src="fat-carousel/fat-carousel.js"&gt;</pre>
+
+            </li>
+            <li>
+                <h3>Set up your HTML</h3>
+
+                <p>For the HTML, all you need to do is give the div which includes the main containers. You can also
+                    include any images you want directly in the html, other than specifying them while calling the
+                    plugin.</p>
+
+                <pre class="prettyprint linenums">
+&lt;div class="fat-carousel" id="slideshow"&gt;
+    &lt;div class="fat-carousel-container-outer"&gt;
+        &lt;div class="fat-carousel-container"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+            </li>
+            <li>
+                <h3>Call the plugin</h3>
+
+                <p>Now, just call the function on any item you want with your preferred options in a JSON object.</p>
+
+                <pre class="prettyprint linenums">
+$('#slideshow').fatCarousel({
+    'imageArray'      :    ["images/1.jpg", "images/2.jpg", "images/3.jpg", "images/4.jpg", "images/5.jpg"],
+    'itemsOnScreen'   :    [[992, 2], [500, 1]],
+    'startSlide'      :    1,
+    'slideTime'       :    400
+});</pre>
+
+            </li>
+        </ol>
+    </div>
+
+    <div class="container" id="customize">
+        <h2>Customizing Options</h2>
+
+        <table>
+            <thead>
+                <td>Option</td>
+                <td>Default</td>
+                <td>Type</td>
+                <td>Description</td>
+            </thead>
+            <tr>
+                <td>style</td>
+                <td>shrink</td>
+                <td>string</td>
+                <td>This aspect defines the animation style of the list elements when one scrolls up or down.</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>270px</td>
+                <td>integer/string</td>
+                <td>This defines the width of the outer container. The list is by default 100% of the width
+                    of this container. (It can be an integer like 300 or a string like '300px' which would mean the
+                    same thing. You can also set the width in percentage like '50%')</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>500px</td>
+                <td>integer/string</td>
+                <td>This defines the height of the list and not the outer container. The outer container has a height
+                    'auto' by default. (It can be an integer like 500 or a string like '500px' which would mean the
+                    same thing. You can also set the height in percentage like '50%')</td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+.fat-carousel {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  overflow: hidden !important;
+  position: relative !important; }
+  .fat-carousel .fat-carousel-container-outer {
+    overflow: hidden; }
+    .fat-carousel .fat-carousel-container-outer .fat-carousel-container {
+      display: flex !important;
+      margin-bottom: -15px;
+      /*Set to 0 if scroll is hidden*/
+      overflow-x: scroll;
+      overflow-y: hidden !important;
+      width: 100%;
+      align-items: center; }
+    .fat-carousel .fat-carousel-container-outer .fat-carousel-item {
+      overflow: hidden !important;
+      padding: 0 !important; }
+    .fat-carousel .fat-carousel-container-outer .fat-carousel-item > img {
+      width: 100%;
+      display: block;
+      background: url("../images/loader.gif") center center no-repeat; }
+  .fat-carousel .fat-carousel-left-toggle, .fat-carousel .fat-carousel-right-toggle {
+    font-size: 35px;
+    color: cadetblue;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    cursor: pointer; }
+  .fat-carousel .fat-carousel-left-toggle {
+    left: 20px; }
+  .fat-carousel .fat-carousel-right-toggle {
+    right: 20px; }
+  .fat-carousel .fat-carousel-nav {
+    margin-top: 20px;
+    padding: 0;
+    width: 100%;
+    text-align: center; }
+  .fat-carousel .fat-carousel-nav div {
+    display: inline-block; }
+  .fat-carousel .fat-carousel-nav div span {
+    cursor: pointer;
+    float: left;
+    height: 12px;
+    width: 12px;
+    background-color: #fafafa;
+    border-radius: 7px;
+    margin: 0 5px;
+    border: solid 1px gainsboro;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease; }
+  .fat-carousel .fat-carousel-nav div span:hover {
+    background-color: gainsboro; }
+  .fat-carousel .fat-carousel-nav div span.fat-carousel-nav-active {
+    background-color: #20dcff;
+    border-color: #20dcff; }
+  .fat-carousel .fat-carousel-controls {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; }
+  .fat-carousel .fat-carousel-controls div {
+    display: inline-block; }
+  .fat-carousel .fat-carousel-controls div input {
+    border-radius: 13px;
+    border: solid 1px gainsboro;
+    box-shadow: none;
+    outline: none !important;
+    background-color: #fafafa;
+    cursor: pointer;
+    padding: 5px 8px;
+    margin: 0 5px;
+    color: #426d6e;
+    font-family: "Helvetica Neue", sans-serif;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease; }
+  .fat-carousel .fat-carousel-controls div input:hover {
+    color: white;
+    background-color: #a2b6b9;
+    border-color: #a2b6b9; }
+
+/*# sourceMappingURL=fat.carousel.css.map */

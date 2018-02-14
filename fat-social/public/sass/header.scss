@@ -1,0 +1,124 @@
+$logo-color: #825fa3;
+$search-color: #f1f6f9;
+
+body {
+    padding-top: 60px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    display: flex !important;
+    flex-flow: row;
+    padding: 10px 20px;
+    background-color: white;
+    height: 60px;
+    border-bottom: 1px solid gainsboro;
+
+    #header-logo {
+        flex: 0 0 auto;
+        font: {
+            family: 'Teko', sans-serif;
+            size: 33px;
+        }
+        color: $logo-color;
+        display: inline-block;
+        line-height: 40px;
+
+        span {
+            font: {
+                family: 'Open Sans Condensed', sans-serif;
+                size: 30px;
+                weight: 300;
+            }
+        }
+    }
+
+    #header-search {
+        flex: 1 1 auto;
+        margin: 0 auto 0 15px;
+        max-width: 540px;
+        min-width: 240px;
+
+        input[type=search] {
+            float: left;
+            min-width: 200px;
+            max-width: 500px;
+            width: calc(100% - 40px);
+            height: 40px;
+            border: none;
+            background-color: $search-color;
+            margin: 0;
+            padding: 0 10px;
+            font: {
+                family: 'Roboto', sans-serif;
+                size: 15px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type=submit] {
+            float: left;
+            height: 40px;
+            width: 40px;
+            border: none;
+            background: $search-color url('../img/header-search.png') center center no-repeat;
+            background-size: 40% 40%;
+            margin: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    a {
+        color: #2f0c51 !important;
+    }
+
+    #user-messages, #user-notifications, #user-settings {
+        padding-top: 10px;
+        flex: 0 0 auto;
+        margin-right: 13px;
+        img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    #user-settings {
+        width: 20%;
+
+        @media screen and (max-width: 850px) {
+            width: 20px;
+        }
+    }
+
+    #user-messages {
+        margin-left: 15px;
+    }
+
+    #user-profile {
+        flex: 0 0 auto;
+        margin-left: 10px;
+        line-height: 0;
+        img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        span {
+            font: {
+                family: 'Raleway', 'Open Sans', 'Roboto', sans-serif;
+                size: 16px;
+            }
+        }
+    }
+}

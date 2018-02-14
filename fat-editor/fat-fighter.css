@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800");
+
+body {
+    margin: 0;
+    padding: 15px 40px;
+}
+
+.fat-editor {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    min-height: 400px;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+}
+
+.fat-editor-toolbar {
+    flex: 0;
+    border: 1px solid #45b4ed;
+    border-bottom: 1px solid gainsboro;
+}
+.fat-editor-toolbar-row {
+    padding: 5px 10px;
+    height: 23px;
+    width: 100%;
+}
+
+/* ---------- STYLE ---------- */
+.fat-editor-toolbar-toolgroup[data-class=style] button {
+    height: 100%;
+    width: 26px;
+    padding: 0 3px;
+    border: none;
+    outline: none !important;
+    vertical-align: baseline;
+    background: white no-repeat center;
+    background-size: auto calc(100% - 12px);
+}
+/* ---------- STYLE ---------- */
+
+.fat-editor-toolbar-toolgroup {
+    display: inline-block;
+    margin: 0 5px;
+    height: 100%;
+}
+.fat-editor-toolbar-toolgroup button:hover {
+    background-color: #ebe9fa;
+    box-shadow: inset 0 0 2px lavender;
+}
+.fat-editor-toolbar-toolgroup button:active {
+    background-color: #ddddf0;
+}
+.fat-editor-toolbar-toolgroup button.active {
+    background-color: lavender;
+}
+
+.fat-editor-content {
+    flex: 1 auto;
+    border-left: 1px solid #45b4ed;
+    border-right: 1px solid #45b4ed;
+}
+.fat-editor-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.fat-editor-node-info {
+    font-size: 13px;
+    flex: 0 26px;
+    background-color: #5347a1;
+    line-height: 26px;
+    padding: 0 15px;
+    color: white;
+}

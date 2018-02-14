@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FatMath</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400, 800' rel='stylesheet' type='text/css'>
+
+    <script src="../plugin-scripts/jquery.min.js"></script>
+    <script src="fat-editor.js"></script>
+</head>
+<body>
+
+<div class="fat-editor-frame">
+    <div class="fat-editor-toolbar">
+        <button data-class="heading" data-value="1">H1</button>
+        <button data-class="heading" data-value="2">H2</button>
+        <button data-class="heading" data-value="3">H3</button>
+        <button data-class="heading" data-value="4">H4</button>
+        <button data-class="heading" data-value="5">H5</button>
+        <button data-class="heading" data-value="6">H6</button>
+        <button data-class="list" data-value="u">UL</button>
+        <button data-class="list" data-value="o">OL</button>
+        <button data-class="bold">bold</button>
+        <button data-class="italic">italic</button>
+        <button data-class="underline">underline</button>
+        <button data-class="strikethrough">strikethrough</button>
+        <button data-class="indent" data-value="i">indent</button>
+        <button data-class="indent" data-value="o">outdent</button>
+        <button data-class="font">font</button>
+    </div>
+
+    <div contenteditable="true" class="fat-editor"></div>
+
+    <div class="fat-editor-node"></div>
+</div>
+
+<style scoped>
+
+    body {
+        margin: 10px 20px;
+    }
+
+    .fat-editor {
+        min-height: 200px;
+        max-height: 500px;
+        overflow: scroll;
+        width: calc(100% - 40px);
+        border: 1px solid #cfcfcf;
+        border-radius: 10px;
+        padding: 20px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+    }
+    .fat-editor:focus {
+        outline: none;
+    }
+
+    .fat-editor h1, .fat-editor h2, .fat-editor h3, .fat-editor h4, .fat-editor h5, .fat-editor h6 {
+        font-weight: normal;
+    }
+
+    .fat-editor p {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .fat-editor .indent {
+        margin-left: 30px;
+    }
+
+</style>
+
+</body>
+</html>
